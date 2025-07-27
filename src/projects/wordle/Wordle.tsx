@@ -226,7 +226,6 @@ export function Wordle() {
       <button
         className="mb-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition touch-manipulation"
         onClick={handleRestart}
-        onTouchStart={(e) => e.preventDefault()}
       >
         Yeniden Başlat
       </button>
@@ -258,7 +257,6 @@ export function Wordle() {
                     color: keyStatus !== "empty" ? text : undefined
                   }}
                   onClick={() => handleKeyboardClick(key)}
-                  onTouchStart={(e) => e.preventDefault()}
                 >{key}</button>
               );
             })}
@@ -268,7 +266,6 @@ export function Wordle() {
                 className="px-3 py-3 bg-gray-300 rounded text-lg font-bold active:bg-gray-400 touch-manipulation"
                 style={{ minWidth: 44, minHeight: 44 }}
                 onClick={handleBackspace}
-                onTouchStart={(e) => e.preventDefault()}
               >⌫</button>
             )}
           </div>
@@ -279,7 +276,6 @@ export function Wordle() {
             className="px-6 py-3 bg-gray-300 rounded text-xs font-bold active:bg-gray-400 touch-manipulation"
             style={{ minWidth: 80, minHeight: 44 }}
             onClick={handleEnter}
-            onTouchStart={(e) => e.preventDefault()}
           >ENTER</button>
         </div>
       </div>
