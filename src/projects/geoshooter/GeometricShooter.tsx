@@ -1,13 +1,13 @@
 import { useEffect, useRef } from 'react';
 
-class Player {
-  x: number;
-  y: number;
-  constructor(x: number, y: number) {
-    this.x = x;
-    this.y = y;
-  }
-}
+// class Player {
+//   x: number;
+//   y: number;
+//   constructor(x: number, y: number) {
+//     this.x = x;
+//     this.y = y;
+//   }
+// }
 
 export function GeometricShooter() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
