@@ -1,8 +1,16 @@
 import { Link } from 'react-router-dom';
-import { getProjects } from '../lib/projectDiscovery';
+import { useEffect } from 'react';
+import { getProjects } from '@/lib/projectDiscovery';
+import { updateFavicon, updatePageTitle } from '@/lib/favicon';
 
 export function Home() {
   const projects = getProjects();
+
+  // Restore default favicon and title when on home page
+  useEffect(() => {
+    updateFavicon('/');
+    updatePageTitle('');
+  }, []);
 
   return (
     <div>

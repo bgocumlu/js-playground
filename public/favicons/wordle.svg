@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" fill="#121213" rx="2"/>
+  
+  <!-- Wordle grid representation -->
+  <!-- Row 1 - partial match -->
+  <rect x="4" y="4" width="4" height="4" fill="#b59f3b" rx="0.5"/>
+  <rect x="9" y="4" width="4" height="4" fill="#787c7e" rx="0.5"/>
+  <rect x="14" y="4" width="4" height="4" fill="#6aaa64" rx="0.5"/>
+  <rect x="19" y="4" width="4" height="4" fill="#787c7e" rx="0.5"/>
+  <rect x="24" y="4" width="4" height="4" fill="#6aaa64" rx="0.5"/>
+  
+  <!-- Row 2 - better match -->
+  <rect x="4" y="10" width="4" height="4" fill="#6aaa64" rx="0.5"/>
+  <rect x="9" y="10" width="4" height="4" fill="#6aaa64" rx="0.5"/>
+  <rect x="14" y="10" width="4" height="4" fill="#6aaa64" rx="0.5"/>
+  <rect x="19" y="10" width="4" height="4" fill="#6aaa64" rx="0.5"/>
+  <rect x="24" y="10" width="4" height="4" fill="#6aaa64" rx="0.5"/>
+  
+  <!-- Letter "W" in the center -->
+  <text x="16" y="22" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#ffffff" text-anchor="middle">W</text>
+</svg>

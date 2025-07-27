@@ -1,10 +1,25 @@
 import { Link, useParams } from "react-router-dom";
-import { Suspense } from "react";
-import { getProjectByPath } from "../lib/projectDiscovery";
+import { Suspense, useEffect } from "react";
+import { getProjectByPath } from "@/lib/projectDiscovery";
+import { updateFavicon, updatePageTitle } from "@/lib/favicon";
 
 export function ProjectPage() {
   const { projectPath } = useParams<{ projectPath: string }>();
   const project = getProjectByPath(`/${projectPath}`);
+
+  // Update favicon and title when project changes
+  useEffect(() => {
+    if (project) {
+      updateFavicon(project.path);
+      updatePageTitle(project.name);
+    }
+    
+    // Cleanup: restore default favicon when component unmounts
+    return () => {
+      updateFavicon('/');
+      updatePageTitle('');
+    };
+  }, [project]);
 
   if (!project) {
     return (
