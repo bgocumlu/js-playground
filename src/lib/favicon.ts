@@ -6,13 +6,21 @@ export interface FaviconConfig {
   type?: string;
 }
 
+// Get the base path for GitHub Pages
+const getBasePath = () => {
+  return window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+    ? '' 
+    : '/js-playground';
+};
+
 export function updateFavicon(projectPath: string): void {
-  let faviconHref = '/vite.svg'; // default
+  const basePath = getBasePath();
+  let faviconHref = `${basePath}/vite.svg`; // default
   
   if (projectPath !== '/') {
     const project = getProjectByPath(projectPath);
     if (project?.favicon) {
-      faviconHref = project.favicon;
+      faviconHref = `${basePath}${project.favicon}`;
     }
   }
   
