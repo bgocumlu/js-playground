@@ -6,10 +6,10 @@ export function Home() {
 
   return (
     <div>
-      <h1>Projects</h1>
+      <h1 className=''>Projects</h1>
       <ul>
         {projects.map((project) => (
-          <li key={project.path}>
+          <li key={project.path} className='mb-1'>
             <Link to={project.path} style={{ textDecoration: 'underline' }}>{project.name}</Link>
           </li>
         ))}

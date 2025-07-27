@@ -1,4 +1,5 @@
 import { Link, useParams } from "react-router-dom";
+import { Suspense } from "react";
 import { getProjectByPath } from "../lib/projectDiscovery";
 
 export function ProjectPage() {
@@ -26,7 +27,9 @@ export function ProjectPage() {
         </Link>
       </nav>
       <h1>{project.name}</h1>
-      <ProjectComponent />
+      <Suspense fallback={<div>Loading project...</div>}>
+        <ProjectComponent />
+      </Suspense>
     </div>
   );
 }
