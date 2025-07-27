@@ -3,7 +3,7 @@ import { Home } from './components/Home';
 import { ProjectPage } from './components/ProjectPage';
 
 // Get the base path for GitHub Pages
-const basename = import.meta.env.PROD ? '/js-playground' : '';
+const basename = process.env.NODE_ENV === 'production' ? '/js-playground' : '';
 
 export default function App() {
   return (
